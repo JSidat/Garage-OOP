@@ -7,4 +7,11 @@ public class Bus extends Vehicle {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void openDoors() {
+		System.out.println("Doors opened");
+	}
+
+	public void closeDoors() {
+		System.out.println("doors closed");
+	}
 }

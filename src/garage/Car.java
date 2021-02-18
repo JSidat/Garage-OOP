@@ -11,6 +11,10 @@ public class Car extends Vehicle {
 		System.out.println("boot lid open");
 	}
 
+	public void closeBoot() {
+		System.out.println("Boot lid closed");
+	}
+
 	@Override
 	public void startEngine() {
 		System.out.println("push clutch and turn key");
