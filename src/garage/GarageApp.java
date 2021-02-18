@@ -10,6 +10,11 @@ public class GarageApp {
 
 		Vehicle bus1 = new Bus("Volvo", "longline", "Red", 3, 12);
 
+		Garage garage = new Garage();
+
+		garage.addVehicle(bus1);
+		garage.addVehicle(car1);
+		garage.addVehicle(motorbike1);
 	}
 
 }

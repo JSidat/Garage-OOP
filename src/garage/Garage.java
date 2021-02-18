@@ -14,11 +14,12 @@ public class Garage {
 		vehicles.remove(vehicle);
 	}
 
-	public void calcBill(ArrayList<Vehicle> vehicles) {
+	public void calcBill(int id) {
 		for (Vehicle vehicle : vehicles) {
-			if (vehicle.getId() == 1)
-				;
-			System.out.println("Your bill is going to be £150");
+			if (vehicle.getId() == 1) {
+				System.out.println("Your bill is going to be £150");
+			}
+
 		}
 	}
 
