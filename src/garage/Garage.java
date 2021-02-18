@@ -14,13 +14,19 @@ public class Garage {
 		vehicles.remove(vehicle);
 	}
 
-	public void calcBill(int id) {
+	public void calcBill() {
 		for (Vehicle vehicle : vehicles) {
 			if (vehicle.getId() == 1) {
-				System.out.println("Your bill is going to be £150");
+				System.out.println("The bill for this car is going to be £150");
+
+			} else if (vehicle.getId() == 2) {
+				System.out.println("The bill for this motorbike is going to be £200");
+
+			} else if (vehicle.getId() == 3) {
+				System.out.println("The bill for this bus is going to be £300");
+
 			}
-
 		}
-	}
 
+	}
 }
