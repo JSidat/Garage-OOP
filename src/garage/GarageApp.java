@@ -16,7 +16,10 @@ public class GarageApp {
 		garage.addVehicle(car1);
 		garage.addVehicle(motorbike1);
 
+		garage.removeVehicle(1);
+
 		garage.calcBill();
+
 	}
 
 }

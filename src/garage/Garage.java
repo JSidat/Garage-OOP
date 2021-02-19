@@ -10,23 +10,39 @@ public class Garage {
 		vehicles.add(vehicle);
 	}
 
-	public void removeVehicle(Vehicle vehicle) {
-		vehicles.remove(vehicle);
+	public void removeVehicle(int id) {
+		for (Vehicle vehicle : vehicles) {
+			if (vehicle.getId() == id) {
+				vehicles.remove(vehicle);
+				break;
+			}
+		}
 	}
 
 	public void calcBill() {
 		for (Vehicle vehicle : vehicles) {
-			if (vehicle.getId() == 1) {
+			if (vehicle instanceof Car) {
 				System.out.println("The bill for this car is going to be £150");
 
-			} else if (vehicle.getId() == 2) {
+			} else if (vehicle instanceof Motorbike) {
 				System.out.println("The bill for this motorbike is going to be £200");
 
-			} else if (vehicle.getId() == 3) {
+			} else if (vehicle instanceof Bus) {
 				System.out.println("The bill for this bus is going to be £300");
-
 			}
 		}
-
 	}
+
+	public void emptyGarage() {
+		vehicles.removeAll(vehicles);
+	}
+
+	public void removeMultipleVehiclesByType(String vehicleType) {
+		for (Vehicle vehicle : new ArrayList<>(vehicles)) {
+			if (vehicle.getClass().getTypeName().contains(vehicleType)) {
+				vehicles.remove(vehicle);
+			}
+		}
+	}
+
 }
